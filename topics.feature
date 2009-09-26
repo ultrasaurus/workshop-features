@@ -7,7 +7,7 @@ Feature: Topics
     And I follow "New topic"
     Then I should see a "Create" button
 
-  Scenario: Getting to the new topic page
+  Scenario: Creating a topic
     Given I go to topics
     And I follow "New topic"
     When I fill in "Title" with "Rails Fixtures"
