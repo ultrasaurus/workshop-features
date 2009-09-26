@@ -1,5 +1,4 @@
 module NavigationHelpers
-  include ActionController::UrlWriter
   # Maps a name to a path. Used by the
   #
   #   When /^I go to (.+)$/ do |page_name|
@@ -11,7 +10,7 @@ module NavigationHelpers
     
     when /the homepage/
       '/'
-          
+    
     # Add more mappings here.
     # Here is a more fancy example:
     #
@@ -19,13 +18,9 @@ module NavigationHelpers
     #     user_profile_path(User.find_by_login($1))
 
     else
-      #begin
-
       "/#{page_name}"
-      #rescue
-      #  raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
-      #    "Now, go and add a mapping in #{__FILE__}"
-      #end
+      #raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
+      #  "Now, go and add a mapping in #{__FILE__}"
     end
   end
 end
