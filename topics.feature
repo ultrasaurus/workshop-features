@@ -14,6 +14,6 @@ Feature: Topics
     And I fill in "Description" with "Introduce how to add test data with fixtures."
     And I press "Create"
     Then I should see "Rails Fixtures"
-    And I should see a "New topic" link
+    And I should be on topics 
 
     
